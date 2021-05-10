@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{770071CF-4437-4B95-9910-630D6DF154CA}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>MH650RGB</RootNamespace>
-    <AssemblyName>MH650RGB</AssemblyName>
+    <ProjectGuid>{9805512D-79CD-421D-8781-DCB79038646C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MH650RGBTest</RootNamespace>
+    <AssemblyName>MH650RGBTest</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,12 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HidLibrary, Version=3.2.49.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\hidlibrary.3.3.40\lib\net45\HidLibrary.dll</HintPath>
+    <Reference Include="HidLibrary">
+      <HintPath>..\MH650RGB\bin\Debug\HidLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="MH650RGB">
+      <HintPath>..\MH650RGB\bin\Debug\MH650RGB.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,13 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packet.cs" />
-    <Compile Include="MH650.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
